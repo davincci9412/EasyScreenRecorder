@@ -1,0 +1,35 @@
+﻿<Window x:Class="ScreenRecoder.Configure"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Easy ScreenCam Configurations" Height="605.983" Width="373.278" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Left" Height="549" Margin="10,21,0,0" VerticalAlignment="Top" Width="331">
+        <GroupBox Header="Audio Devices" HorizontalAlignment="Left" VerticalAlignment="Top" Height="149" Width="332" Margin="0,0,-1,0">
+            <Grid HorizontalAlignment="Left" Margin="0,0,-7,5" Width="327">
+                <ComboBox x:Name="ComboAudioInputDevice" HorizontalAlignment="Left" Height="25" Margin="89,26,0,0" VerticalAlignment="Top" Width="204"  SelectionChanged="ComboAudioInputDevice_SelectionChanged" />
+                <ComboBox x:Name="ComboAudioBitrates" HorizontalAlignment="Left" Height="22" Margin="89,77,0,0" VerticalAlignment="Top" Width="204" SelectionChanged="ComboAudioBitrates_SelectionChanged" />
+                <Label Content="Input" HorizontalAlignment="Left" Margin="46,26,0,0" VerticalAlignment="Top"/>
+                <Label Content="Bitrates" HorizontalAlignment="Left" Margin="33,73,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Recording Format" HorizontalAlignment="Left" Margin="1,154,-1,0" VerticalAlignment="Top" Width="331" Height="117">
+            <Grid HorizontalAlignment="Left" Height="97" VerticalAlignment="Top" Width="317">
+                <RadioButton x:Name="OptionAudioAVI" Content="AVI - Audio Video Interleaved" HorizontalAlignment="Left" Height="17" Margin="29,22,0,0" VerticalAlignment="Top" Width="239" Checked="RadioButton_AudioAVIChecked"/>
+                <RadioButton x:Name="OptionAudioMP4" Content="MP4 - MPEG Layer 4" HorizontalAlignment="Left" Height="22" Margin="29,45,0,0" VerticalAlignment="Top" Width="209" Checked="RadioButton_AudioMP4Checked"/>
+                <CheckBox x:Name="CheckAudioIS" Content="Audio Recording" HorizontalAlignment="Left" Height="16" Margin="29,68,0,0" VerticalAlignment="Top" Width="264" Checked="CheckButton_AudioIS" Unchecked="CheckButton_AudioISno"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Recording Quality" HorizontalAlignment="Left" Margin="1,276,-2,0" VerticalAlignment="Top" Width="332" Height="136">
+            <Grid HorizontalAlignment="Left" Height="117" Margin="0,0,-19,-3" VerticalAlignment="Top" Width="339">
+                <ComboBox x:Name="ComboVideoResolution" HorizontalAlignment="Left" Height="25" Margin="37,20,0,0" VerticalAlignment="Top" Width="253"  SelectionChanged="ComboVideoResolution_SelectionChanged"/>
+                <ComboBox x:Name="ComboVideoFrameRates" HorizontalAlignment="Left" Height="25" Margin="37,63,0,0" VerticalAlignment="Top" Width="253"  SelectionChanged="ComboVideoFrameRates_SelectionChanged"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Codec" Margin="1,417,-2,0" VerticalAlignment="Top" Height="76">
+            <Grid Height="76" Margin="0,-14,-31,-8" VerticalAlignment="Top">
+                <ComboBox x:Name="ComboVideoCodec" HorizontalAlignment="Left" Height="25" Margin="40,29,0,0" VerticalAlignment="Top" Width="249"  SelectionChanged="ComboVideoCodec_SelectionChanged"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="122,520,0,0" VerticalAlignment="Top" Width="75"  Click="OnClick_OK" />
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="219,520,0,0" VerticalAlignment="Top" Width="75"  Click="OnClick_Cancel" />
+    </Grid>
+</Window>
